@@ -2,6 +2,7 @@ package kr.teamcadi.myapa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 // 화면 설명 : 로그인 화면
-// Author : Jang Su Hyun, Last Modified : 2020.11.14
+// Author : Soohyun, Last Modified : 2020.11.28
 public class LoginActivity extends AppCompatActivity
 {
     @Override
@@ -25,7 +26,7 @@ public class LoginActivity extends AppCompatActivity
         CheckBox check_autologin = (CheckBox)findViewById(R.id.cb_autologin);
         TextView findIdAndPassword = (TextView)findViewById(R.id.tv_findIdAndPassword);
         Button btn_login = (Button)findViewById(R.id.btn_login);
-        Button btn_save = (Button)findViewById(R.id.btn_signup);
+        Button btn_signup = (Button)findViewById(R.id.btn_signup);
 
         btn_login.setOnClickListener(new View.OnClickListener()
         {
@@ -42,6 +43,20 @@ public class LoginActivity extends AppCompatActivity
 
                 if(!id.equals("") && !pw.equals(""))
                     Toast.makeText(getApplicationContext(),"로그인 성공", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        findIdAndPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, FindIdAndPwActivity.class));
+            }
+        });
+
+        btn_signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, MemberJoinBasic.class));
             }
         });
     }
