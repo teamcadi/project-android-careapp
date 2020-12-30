@@ -8,42 +8,55 @@
     android:layout_marginEnd="20dp"
     android:layout_gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="아이디/비밀번호 찾기"
-        android:textSize="24sp"
-        android:layout_centerHorizontal="true"/>
+        android:theme="@style/Theme.MyApaAndroid">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="아이디/비밀번호 찾기"
+            android:textSize="24sp"/>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2px"
         android:background="#000000"
-        android:layout_marginTop="70dp"/>
+        android:layout_marginTop="60dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="아이디 찾기"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="비밀번호 찾기"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="40dp"
-        android:text="아이디 찾기"
-        android:textSize="20sp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="40dp"
-        android:text="비밀번호 찾기"
-        android:textSize="20sp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="10dp"
         android:layout_alignBaseline="@id/ev_name"
         android:text="이름"/>
 
@@ -51,7 +64,7 @@
         android:id="@+id/ev_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="130dp"
         android:inputType="textPersonName"
         android:hint="홍길동"
         android:gravity="right"/>
@@ -59,7 +72,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="10dp"
         android:layout_alignBaseline="@id/ev_email"
         android:text="이메일"/>
 
@@ -67,7 +81,7 @@
         android:id="@+id/ev_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="190dp"
         android:inputType="textEmailAddress"
         android:hint="hong_pill@mail.com"
         android:gravity="right"/>
@@ -76,42 +90,54 @@
         android:layout_width="50px"
         android:layout_height="10px"
         android:background="#000000"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="290dp"
         android:layout_centerHorizontal="true"/>
 
-    <EditText
-        android:id="@+id/ev_phoneNumber"
-        android:layout_width="230dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-        android:inputType="phone"
-        android:hint="휴대번호전화 입력('-'제외)"/>
+        android:layout_marginTop="340dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_send_certificationNumber"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="인증번호 전송"/>
+        <EditText
+            android:id="@+id/ev_phoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="phone"
+            android:hint="휴대번호전화 입력('-'제외)"/>
 
-    <EditText
-        android:id="@+id/ev_certificationNumber"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="410dp"
-        android:inputType="number"
-        android:hint="인증번호 입력"/>
+        <Button
+            android:id="@+id/btn_send_certificationNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="인증번호 전송"/>
 
-    <Button
-        android:id="@+id/btn_indentify_certifiationNumber"
-        android:layout_width="125dp"
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="410dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="확인"/>
+        android:layout_marginTop="400dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/ev_certificationNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:hint="인증번호 입력"/>
+
+        <Button
+            android:id="@+id/btn_indentify_certifiationNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="확인"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_finish"

@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity
         Button btn_login = (Button)findViewById(R.id.btn_login);
         Button btn_signup = (Button)findViewById(R.id.btn_signup);
 
+        //로그인 버튼 클릭
         btn_login.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -46,6 +47,7 @@ public class LoginActivity extends AppCompatActivity
             }
         });
 
+        // 아이디/비밀번호 찾기 클릭
         findIdAndPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +55,7 @@ public class LoginActivity extends AppCompatActivity
             }
         });
 
+        // 회원가입 클릭
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
