@@ -28,23 +28,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="성별"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginTop="80dp"
                     android:layout_marginLeft="40dp"/>
 
                 <Button
                     android:id="@+id/btn_men"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="110dp"
                     android:layout_marginLeft="40dp"
                     android:text="남성" />
 
                 <Button
                     android:id="@+id/btn_woman"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp"
-                    android:layout_marginLeft="210dp"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginLeft="250dp"
                     android:text="여성" />
 
                 <TextView
@@ -52,43 +52,78 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="키"
-                    android:layout_marginTop="170dp"
+                    android:layout_marginTop="200dp"
                     android:layout_marginLeft="40dp"/>
 
                 <EditText
                     android:id="@+id/ev_height"
-                    android:layout_width="170dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:hint="173cm"
                     android:textSize="20dp"
-                    android:layout_marginTop="190dp"
+                    android:layout_marginTop="230dp"
                     android:layout_marginLeft="40dp"/>
+
+
+                <ImageView
+                    android:id="@+id/iv_plus1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginLeft="270dp"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+                <ImageView
+                    android:id="@+id/iv_minus1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="230dp"
+                    android:layout_marginLeft="330dp"
+                    app:srcCompat="@android:drawable/ic_input_add" />
 
                 <TextView
                     android:id="@+id/tv_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="몸무게"
-                    android:layout_marginTop="260dp"
+                    android:layout_marginTop="300dp"
                     android:layout_marginLeft="40dp"/>
 
                 <EditText
                     android:id="@+id/ev_weight"
-                    android:layout_width="170dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:hint="70kg"
                     android:textSize="20dp"
-                    android:layout_marginTop="280dp"
+                    android:layout_marginTop="330dp"
                     android:layout_marginLeft="40dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_plus2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="330dp"
+                    android:layout_marginLeft="270dp"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+                <ImageView
+                    android:id="@+id/iv_minus2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="330dp"
+                    android:layout_marginLeft="330dp"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+
 
                 <TextView
                     android:id="@+id/tv_job"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="직업"
-                    android:layout_marginTop="350dp"
+                    android:layout_marginTop="400dp"
                     android:layout_marginLeft="40dp"/>
 
                 <EditText
@@ -98,7 +133,7 @@
                     android:inputType="textPersonName"
                     android:hint="대학생"
                     android:textSize="20dp"
-                    android:layout_marginTop="370dp"
+                    android:layout_marginTop="430dp"
                     android:layout_marginLeft="40dp"/>
 
                 <TextView
@@ -106,16 +141,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="관심 연령대 설정"
-                    android:layout_marginTop="440dp"
+                    android:layout_marginTop="500dp"
                     android:layout_marginLeft="40dp"/>
 
                 <SeekBar
                     android:id="@+id/seekBar"
                     android:layout_width="330dp"
                     android:layout_height="60dp"
-                    android:layout_marginTop="465dp"
+                    android:layout_marginTop="530dp"
                     android:layout_marginLeft="40dp"
                     android:max="100"/>
+
+                <Button
+                    android:id="@+id/btn_finish"
+                    android:layout_width="340dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="630dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="완료" />
 
 
             </RelativeLayout>
