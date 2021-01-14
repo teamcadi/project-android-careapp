@@ -6,11 +6,19 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 // 화면 설명 : 검색화면
-// Author : Soohyun, Last Modified : 2021.01.05
+// Author : Soohyun, Last Modified : 2021.01.14
 public class SearchActivity extends AppCompatActivity {
-    SearchView searchView;
+    public static EditText et_search;
     FragmentManager fragmentManager;
     FragmentTransaction transaction;
     RecentSearchFragment recentSearchFragment;
@@ -21,32 +29,50 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        searchView = (SearchView)findViewById(R.id.searchView);
+        et_search = (EditText)findViewById(R.id.et_search);
         fragmentManager = getSupportFragmentManager();
         recentSearchFragment = new RecentSearchFragment();
         searchDetailFragment = new SearchDetailFragment();
 
-        // 처음 화면 설정
-        transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.frame_layout, recentSearchFragment).commit();
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            // 검색버튼 누른 경우
+        // 검색창 클릭 시
+        et_search.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) {
-                transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.frame_layout, searchDetailFragment).commit();
-
-                return true;
-            }
-
-            // searchView의 텍스트가 바뀌는 경우
-            @Override
-            public boolean onQueryTextChange(String newText) {
+            public void onFocusChange(View view, boolean b) {
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.frame_layout, recentSearchFragment).commit();
+            }
+        });
 
+        // 검색 버튼 클릭 시
+        et_search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                switch (i) {
+                    case EditorInfo.IME_ACTION_SEARCH:
+                        transaction = fragmentManager.beginTransaction();
+                        transaction.replace(R.id.frame_layout, searchDetailFragment).commit();
+                        break;
+                }
                 return true;
+            }
+        });
+
+        // 검색창 텍스트 변경 시
+        et_search.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                transaction = fragmentManager.beginTransaction();
+                transaction.replace(R.id.frame_layout, recentSearchFragment).commit();
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
             }
         });
     }
