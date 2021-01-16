@@ -12,10 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApaAndroid">
+<<<<<<< HEAD
         <activity android:name=".MemberJoinDetail"></activity>
         <activity android:name=".MemberJoinBasic" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SplashActivity">
+=======
+        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MemberJoinDetail" />
+        <activity android:name=".activity.MemberJoinBasic" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.SplashActivity">
+>>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

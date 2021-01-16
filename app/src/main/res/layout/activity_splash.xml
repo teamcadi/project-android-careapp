@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+<<<<<<< HEAD
     android:layout_height="match_parent"
     android:background="@drawable/bg_splash">
 
@@ -24,3 +25,15 @@
         app:srcCompat="@drawable/iv_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+    android:background="@drawable/bg_splash"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginTop="135dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo_white"/>
+</RelativeLayout>
+>>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75

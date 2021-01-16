@@ -1,4 +1,4 @@
-package kr.teamcadi.myapa;
+package kr.teamcadi.myapa.activity;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
+
+import kr.teamcadi.myapa.R;
 
 // 화면 설명 : 서비스 실행 시 첫 화면
 // Author : Jaey, Last Modified : 2020.11.24
@@ -62,7 +64,7 @@ public class SplashActivity extends AppCompatActivity
         public void run()
         {
             // 로그인 화면으로 이동함
-            Intent gotoLogin = new Intent(SplashActivity.this, LoginActivity.class);
+            Intent gotoLogin = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(gotoLogin);
             finish();
         }
