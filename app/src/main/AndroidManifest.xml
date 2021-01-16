@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApaAndroid">
-        <activity android:name=".ReportActivity"></activity>
+        <activity android:name=".FeedActivity"></activity>
+        <activity android:name=".ReportActivity" />
         <activity android:name=".AlarmActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".FindIdAndPwActivity" />

@@ -16,7 +16,7 @@ import com.google.android.material.tabs.TabLayout;
 public class FindIdAndPwActivity extends AppCompatActivity {
     Toolbar toolbar;
     TabLayout tabLayout;
-    View view_line;
+    View line;
     EditText ev_phoneNumber;
     Button btn_send_certificationNumber;
     EditText ev_certificationNumber;
@@ -33,13 +33,13 @@ public class FindIdAndPwActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false); //기본 타이틀 삭제
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //back버튼
 
-        view_line = (View)findViewById(R.id.view_line);
+        line = (View)findViewById(R.id.line);
         ev_phoneNumber = (EditText)findViewById(R.id.ev_phoneNumber);
         btn_send_certificationNumber = (Button)findViewById(R.id.btn_send_certificationNumber);
         ev_certificationNumber = (EditText)findViewById(R.id.ev_certificationNumber);
         btn_indentify_certifiationNumber = (Button)findViewById(R.id.btn_indentify_certificationNumber);
 
-        view_line.setVisibility(View.INVISIBLE);
+        line.setVisibility(View.INVISIBLE);
         ev_phoneNumber.setVisibility(View.INVISIBLE);
         btn_send_certificationNumber.setVisibility(View.INVISIBLE);
         ev_certificationNumber.setVisibility(View.INVISIBLE);
@@ -70,14 +70,14 @@ public class FindIdAndPwActivity extends AppCompatActivity {
     private void changeTab(int pos) {
         switch (pos) {
             case 0:
-                view_line.setVisibility(View.INVISIBLE);
+                line.setVisibility(View.INVISIBLE);
                 ev_phoneNumber.setVisibility(View.INVISIBLE);
                 btn_send_certificationNumber.setVisibility(View.INVISIBLE);
                 ev_certificationNumber.setVisibility(View.INVISIBLE);
                 btn_indentify_certifiationNumber.setVisibility(View.INVISIBLE);
                 break;
             case 1:
-                view_line.setVisibility(View.VISIBLE);
+                line.setVisibility(View.VISIBLE);
                 ev_phoneNumber.setVisibility(View.VISIBLE);
                 btn_send_certificationNumber.setVisibility(View.VISIBLE);
                 ev_certificationNumber.setVisibility(View.VISIBLE);
