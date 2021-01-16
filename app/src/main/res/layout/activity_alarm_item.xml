@@ -11,6 +11,7 @@
         android:layout_marginLeft="10dp"
         app:srcCompat="@drawable/profile"/>
 
+    <!-- 알림 내용 -->
     <TextView
         android:id="@+id/tv_alarm"
         android:layout_width="wrap_content"
@@ -20,6 +21,7 @@
         android:text="XXX님이 XXX게시판에 댓글을 달았습니다."
         android:textSize="16sp"/>
 
+    <!-- 알림 세부적인 내용 -->
     <TextView
         android:id="@+id/tv_alarm_detail"
         android:layout_width="wrap_content"

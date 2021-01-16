@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:layout_gravity="center">
 
+    <!-- 상단바 -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.MyApaAndroid">
 
+        <!-- 상단바 타이틀 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +30,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="60dp">
-        
+
+        <!-- 탭 아이템 -->
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,6 +59,7 @@
             android:layout_alignBaseline="@id/ev_name"
             android:text="이름"/>
 
+        <!-- 사용자 이름 입력 -->
         <EditText
             android:id="@+id/ev_name"
             android:layout_width="match_parent"
@@ -73,6 +77,7 @@
             android:layout_alignBaseline="@id/ev_email"
             android:text="이메일"/>
 
+        <!-- 사용자 이메일 입력 -->
         <EditText
             android:id="@+id/ev_email"
             android:layout_width="match_parent"
@@ -82,6 +87,7 @@
             android:hint="hong_pill@mail.com"
             android:gravity="right"/>
 
+        <!-- 구분선 -->
         <View
             android:id="@+id/line"
             android:layout_width="50px"
@@ -96,6 +102,7 @@
             android:layout_marginTop="205dp"
             android:orientation="horizontal">
 
+            <!-- 사용자 휴대전화번호 입력 -->
             <EditText
                 android:id="@+id/ev_phoneNumber"
                 android:layout_width="0dp"
@@ -104,6 +111,7 @@
                 android:inputType="phone"
                 android:hint="휴대번호전화 입력('-'제외)"/>
 
+            <!-- 인증번호 전송 버튼 -->
             <Button
                 android:id="@+id/btn_send_certificationNumber"
                 android:layout_width="0dp"
@@ -119,6 +127,7 @@
             android:layout_marginTop="265dp"
             android:orientation="horizontal">
 
+            <!-- 인증번호 입력 -->
             <EditText
                 android:id="@+id/ev_certificationNumber"
                 android:layout_width="0dp"
@@ -127,6 +136,7 @@
                 android:inputType="number"
                 android:hint="인증번호 입력"/>
 
+            <!-- 인증번호 확인 버튼 -->
             <Button
                 android:id="@+id/btn_indentify_certificationNumber"
                 android:layout_width="0dp"
@@ -136,6 +146,7 @@
 
         </LinearLayout>
 
+        <!-- 완료 버튼 -->
         <Button
             android:id="@+id/btn_finish"
             android:layout_width="match_parent"

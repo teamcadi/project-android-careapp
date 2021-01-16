@@ -4,13 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <!-- 댓글을 작성한 사용자의 프로필 사진 -->
     <ImageView
-        android:id="@+id/iv_feed_user_profile"
+        android:id="@+id/iv_comment_user_profile"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/profile"/>
 
+    <!-- 댓글을 작성한 사용자명 -->
     <TextView
         android:id="@+id/tv_comment_user_name"
         android:layout_width="wrap_content"
@@ -20,6 +22,7 @@
         android:text="사용자명"
         android:textSize="20sp"/>
 
+    <!-- 댓글을 작성한 시간 -->
     <TextView
         android:id="@+id/tv_comment_date"
         android:layout_width="wrap_content"
@@ -30,6 +33,7 @@
         android:text="2020.01.01 18:26"
         android:textSize="12sp"/>
 
+    <!-- 댓글 내용 -->
     <TextView
         android:id="@+id/tv_comment"
         android:layout_width="wrap_content"
@@ -39,6 +43,7 @@
         android:text="오늘부터 해봐야겠어요~"
         android:textSize="18sp"/>
 
+    <!-- 댓글 신고 -->
     <TextView
         android:id="@+id/tv_report"
         android:layout_width="wrap_content"
@@ -48,8 +53,9 @@
         android:text="신고"
         android:textSize="14sp"/>
 
+    <!-- 댓글에 답글 쓰기 -->
     <TextView
-        android:id="@+id/tv_write_nested_comment"
+        android:id="@+id/tv_write_reply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tv_comment"
@@ -65,11 +71,11 @@
         android:layout_below="@+id/tv_comment"
         android:layout_marginTop="10dp"/>
 
+    <!-- 댓글의 답글 리스트 -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_nested_comment"
+        android:id="@+id/recyclerView_reply"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/line"/>
-
 
 </RelativeLayout>

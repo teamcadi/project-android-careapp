@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <!-- 글에 첨부된 이미지 -->
     <ImageView
         android:id="@+id/iv_feed_image"
         android:layout_width="match_parent"
