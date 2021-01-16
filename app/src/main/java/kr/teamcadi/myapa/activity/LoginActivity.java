@@ -1,4 +1,4 @@
-package kr.teamcadi.myapa;
+package kr.teamcadi.myapa.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import kr.teamcadi.myapa.R;
+import kr.teamcadi.myapa.domain.User;
 
 // 화면 설명 : 로그인 화면
 // Author : Jang Su Hyun, Last Modified : 2020.11.14
