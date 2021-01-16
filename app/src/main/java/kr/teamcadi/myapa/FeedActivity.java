@@ -6,7 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-// 화면 설명 : 리포트 화면
+// 화면 설명 : 피드 화면
 // Author : Soohyun, Last Modified : 2020.01.15
 public class FeedActivity extends AppCompatActivity {
     Toolbar toolbar;

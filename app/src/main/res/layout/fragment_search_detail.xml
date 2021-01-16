@@ -5,11 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".SearchDetailFragment">
 
+    <!-- 테스트용 텍스트-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="detail fragment 입니다"/>
 
+    <!-- 검색된 글 -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

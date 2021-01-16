@@ -7,18 +7,28 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 // 화면 설명 : 검색 전 화면 (최근 검색어, 해시태그)
-// Author : Soohyun, Last Modified : 2021.01.14
+// Author : Soohyun, Last Modified : 2021.01.16
 public class RecentSearchFragment extends Fragment {
+    // 해시태그 버튼 1-6
     Button btn_hashtag1;
     Button btn_hashtag2;
     Button btn_hashtag3;
     Button btn_hashtag4;
     Button btn_hashtag5;
     Button btn_hashtag6;
+
+    ListView lv_recent_search; //최근 검색어 리스트뷰
+    public static ArrayAdapter<String> adapter;
 
     public RecentSearchFragment() {
         // Required empty public constructor
@@ -32,6 +42,7 @@ public class RecentSearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RelativeLayout layout = (RelativeLayout)inflater.inflate(R.layout.fragment_recent_search, container, false);
+
         btn_hashtag1 = (Button)layout.findViewById(R.id.btn_hashtag1);
         btn_hashtag2 = (Button)layout.findViewById(R.id.btn_hashtag2);
         btn_hashtag3 = (Button)layout.findViewById(R.id.btn_hashtag3);
@@ -39,7 +50,21 @@ public class RecentSearchFragment extends Fragment {
         btn_hashtag5 = (Button)layout.findViewById(R.id.btn_hashtag5);
         btn_hashtag6 = (Button)layout.findViewById(R.id.btn_hashtag6);
 
-        //버튼 클릭 시
+        lv_recent_search = (ListView)layout.findViewById(R.id.lv_recent_search);
+        adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, SearchActivity.recent_search_list) ;
+        lv_recent_search.setAdapter(adapter);
+
+        // 전달된 검색어 최근 검색어 리스트뷰에 추가
+        Bundle bundle = getArguments();
+        if(bundle != null) {
+            String query = bundle.getString("query");
+            if(SearchActivity.recent_search_list.size() >= 3) // 최근 검색어 리스트에 저장된 검색어가 3개 이상인 경우 오래된 검색어 삭제
+                SearchActivity.recent_search_list.remove(0);
+            SearchActivity.recent_search_list.add(query); // 최근 검색어 리스트에 검색어 추가
+        }
+        adapter.notifyDataSetChanged(); // 최근 검색어 리스트뷰 갱신
+
+        // 해시태그버튼 클릭 시
         View.OnClickListener clickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,9 +101,10 @@ public class RecentSearchFragment extends Fragment {
         return layout;
     }
 
+    // 해시태그 버튼 클릭시 검색창에 해시태그에 해당하는 검색어 자동 생성
     public void setSearchText(Button button) {
         String text = button.getText().toString().substring(1);
         SearchActivity.et_search.setText(text);
-        SearchActivity.et_search.setSelection(text.length());
+        SearchActivity.et_search.setSelection(text.length()); // 커서위치를 텍스트 마지막 위치로
     }
 }

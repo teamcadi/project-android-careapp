@@ -7,28 +7,32 @@
     android:focusable="true"
     android:focusableInTouchMode="true">
 
+    <!-- 검색창 -->
     <EditText
         android:id="@+id/et_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
         android:hint="검색어를 입력하세요"
         android:imeOptions="actionSearch"
         android:inputType="text" />
 
+    <!-- 검색 아이콘 -->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="20dp"
         app:srcCompat="@drawable/ic_baseline_search_24"/>
 
+    <!-- 검색 전 화면과 검색 후 화면 부분 -->
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="55dp"/>
+        android:layout_marginTop="50dp"/>
 
 </RelativeLayout>
