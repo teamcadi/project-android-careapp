@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- 데일리 리포트 -->
     <item
         android:id="@+id/item_daily_report"
         android:title="데일리 리포트" />
+
+    <!-- 쇼핑 -->
     <item
         android:id="@+id/item_shopping"
         android:title="쇼핑" />
+
+    <!-- 계정 설정 -->
     <item
         android:id="@+id/item_setting"
         android:title="계정 설정" />
+
+    <!-- 공지사항 -->
     <item
         android:id="@+id/item_notice"
         android:title="공지사항" />
+
+    <!-- 고객센터 -->
     <item
         android:id="@+id/item_service_center"
         android:title="고객센터" />

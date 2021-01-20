@@ -30,10 +30,6 @@ public class RecentSearchFragment extends Fragment {
     ListView lv_recent_search; //최근 검색어 리스트뷰
     public static ArrayAdapter<String> adapter;
 
-    public RecentSearchFragment() {
-        // Required empty public constructor
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +60,7 @@ public class RecentSearchFragment extends Fragment {
         }
         adapter.notifyDataSetChanged(); // 최근 검색어 리스트뷰 갱신
 
-        // 해시태그버튼 클릭 시
+        // 해시태그버튼 클릭 시 -> 검색어 자동 생성 메소드 실행
         View.OnClickListener clickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +97,7 @@ public class RecentSearchFragment extends Fragment {
         return layout;
     }
 
-    // 해시태그 버튼 클릭시 검색창에 해시태그에 해당하는 검색어 자동 생성
+    // 검색창에 해시태그에 해당하는 검색어 자동 생성 메소드
     public void setSearchText(Button button) {
         String text = button.getText().toString().substring(1);
         SearchActivity.et_search.setText(text);

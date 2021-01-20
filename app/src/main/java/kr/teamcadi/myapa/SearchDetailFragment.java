@@ -8,13 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-// 화면 설명 : 검색 후 화면 (검색된 글)
+// 화면 설명 : 검색 화면에서 검색 후 보여지는 화면 (검색된 글)
 // Author : Soohyun, Last Modified : 2021.01.05
 public class SearchDetailFragment extends Fragment {
-
-    public SearchDetailFragment() {
-        // Required empty public constructor
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

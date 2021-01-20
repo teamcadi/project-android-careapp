@@ -7,6 +7,7 @@
     android:layout_marginStart="20dp"
     android:layout_marginEnd="20dp">
 
+    <!-- 어플명 -->
     <TextView
         android:id="@+id/tv_appname"
         android:layout_width="wrap_content"
@@ -16,6 +17,7 @@
         android:textSize="50sp"
         android:layout_centerHorizontal="true"/>
 
+    <!-- 아이디 입력창 -->
     <EditText
         android:id="@+id/ev_id"
         android:layout_width="match_parent"
@@ -23,6 +25,7 @@
         android:layout_marginTop="300dp"
         android:hint="아이디" />
 
+    <!-- 비밀번호 입력창 -->
     <EditText
         android:id="@+id/ev_password"
         android:layout_width="match_parent"
@@ -31,6 +34,7 @@
         android:layout_marginTop="370dp"
         android:hint="비밀번호" />
 
+    <!-- 자동 로그인 여부 -->
     <CheckBox
         android:id="@+id/cb_autologin"
         android:layout_width="wrap_content"
@@ -40,6 +44,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true" />
 
+    <!-- 아이디/비밀번호 찾기 화면으로 이동 -->
     <TextView
         android:id="@+id/tv_findIdAndPassword"
         android:layout_width="wrap_content"
@@ -51,6 +56,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginLeft="116dp" />
 
+    <!-- 로그인 버튼 -->
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
@@ -58,6 +64,7 @@
         android:text="로그인"
         android:layout_marginTop="480dp" />
 
+    <!-- 회원가입 버튼 -->
     <Button
         android:id="@+id/btn_signup"
         android:layout_width="match_parent"

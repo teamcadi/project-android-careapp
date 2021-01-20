@@ -28,7 +28,7 @@
         android:layout_marginRight="20dp"
         app:srcCompat="@drawable/ic_baseline_search_24"/>
 
-    <!-- 검색 전 화면과 검색 후 화면 부분 -->
+    <!-- 검색 전 화면과 검색 후 화면 출력 부분 -->
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
