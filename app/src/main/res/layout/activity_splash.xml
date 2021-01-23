@@ -3,29 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-<<<<<<< HEAD
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_splash">
-
-
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
-        android:layout_marginLeft="74dp"
-        android:layout_marginTop="185dp"
-        android:layout_marginEnd="74dp"
-        android:layout_marginRight="74dp"
-        android:layout_marginBottom="366dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/iv_logo" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-=======
     android:background="@drawable/bg_splash"
     android:layout_height="match_parent">
 
@@ -36,4 +13,3 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/logo_white"/>
 </RelativeLayout>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75

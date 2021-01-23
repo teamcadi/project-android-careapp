@@ -27,14 +27,6 @@
                     app:srcCompat="@drawable/abc_vector_test" />
 
                 <TextView
-<<<<<<< HEAD
-                    android:id="@+id/tv_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="150dp"
-                    android:text="성명" />
-=======
                     android:id="@+id/tv_h1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -60,45 +52,21 @@
                     android:text="성명"
                     android:layout_marginTop="150dp"
                     android:layout_marginLeft="40dp"/>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
 
                 <EditText
                     android:id="@+id/ev_name"
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="170dp"
-                    android:hint="홍길동"
-                    android:inputType="textPersonName"
-                    android:textSize="20dp" />
-=======
                     android:inputType="textPersonName"
                     android:hint="홍길동"
                     android:textSize="20dp"
                     android:layout_marginTop="170dp"
                     android:layout_marginLeft="40dp"/>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
 
                 <TextView
                     android:id="@+id/tv_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="240dp"
-                    android:text="이메일" />
-
-                <EditText
-                    android:id="@+id/ev_email"
-                    android:layout_width="330dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="260dp"
-                    android:hint="johndoe@mail.com"
-                    android:inputType="textEmailAddress"
-                    android:textSize="20dp" />
-=======
                     android:text="이메일"
                     android:layout_marginTop="240dp"
                     android:layout_marginLeft="40dp"/>
@@ -112,108 +80,59 @@
                     android:hint="johndoe@mail.com"
                     android:layout_marginTop="260dp"
                     android:layout_marginLeft="40dp"/>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
 
                 <TextView
                     android:id="@+id/tv_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="330dp"
-                    android:text="아이디" />
-=======
                     android:text="아이디"
                     android:layout_marginTop="330dp"
                     android:layout_marginLeft="40dp"/>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
 
                 <EditText
                     android:id="@+id/ev_id"
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="350dp"
-                    android:hint="happy_hong"
-                    android:textSize="20dp" />
-=======
                     android:textSize="20dp"
                     android:hint="happy_hong"
                     android:layout_marginTop="350dp"
                     android:layout_marginLeft="40dp"/>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
 
                 <TextView
                     android:id="@+id/tv_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="420dp"
-                    android:text="비밀번호" />
-=======
                     android:text="비밀번호"
                     android:layout_marginTop="420dp"
                     android:layout_marginLeft="40dp"/>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
 
                 <EditText
                     android:id="@+id/ev_password"
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="440dp"
-                    android:hint="password"
-                    android:inputType="textPassword"
-                    android:textSize="20sp" />
-=======
                     android:textSize="20sp"
                     android:hint="password"
                     android:inputType="textPassword"
                     android:layout_marginTop="440dp"
                     android:layout_marginLeft="40dp"/>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
 
                 <TextView
                     android:id="@+id/tv_nickname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="510dp"
-                    android:text="닉네임" />
-=======
                     android:text="닉네임"
                     android:layout_marginTop="510dp"
                     android:layout_marginLeft="40dp"/>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
 
                 <EditText
                     android:id="@+id/ev_nickname"
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-<<<<<<< HEAD
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="530dp"
-                    android:hint="건강8779"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:id="@+id/iv_logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    app:srcCompat="@drawable/iv_minilogo" />
-
-=======
                     android:textSize="20sp"
                     android:hint="건강8779"
                     android:layout_marginTop="530dp"
                     android:layout_marginLeft="40dp"/>
->>>>>>> bb17b136d1345a5655c64d205f0ed5df59af3f75
+
             </RelativeLayout>
 
             <RelativeLayout
