@@ -46,7 +46,7 @@ public class HomeFragViewPagerAdapter extends FragmentStateAdapter
             default:
                 break;
         }
-        return null;
+        return new EyeFragment();
     }
 
     @Override
