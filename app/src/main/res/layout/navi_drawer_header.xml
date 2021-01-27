@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!-- 사이드바 헤더 -->
     <!-- 사용자의 프로필 사진 -->
     <ImageView
         android:id="@+id/iv_user_image"

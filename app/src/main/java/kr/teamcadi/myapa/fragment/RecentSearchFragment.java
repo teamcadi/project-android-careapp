@@ -1,4 +1,4 @@
-package kr.teamcadi.myapa;
+package kr.teamcadi.myapa.fragment;
 
 import android.os.Bundle;
 
@@ -11,10 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import kr.teamcadi.myapa.R;
+import kr.teamcadi.myapa.activity.SearchActivity;
 
 // 화면 설명 : 검색 전 화면 (최근 검색어, 해시태그)
 // Author : Soohyun, Last Modified : 2021.01.16

@@ -1,4 +1,4 @@
-package kr.teamcadi.myapa;
+package kr.teamcadi.myapa.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import kr.teamcadi.myapa.R;
 
 // 화면 설명 : 리포트 화면
 // Author : Soohyun, Last Modified : 2020.01.09

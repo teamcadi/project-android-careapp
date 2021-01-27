@@ -1,4 +1,4 @@
-package kr.teamcadi.myapa;
+package kr.teamcadi.myapa.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,6 +14,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import kr.teamcadi.myapa.R;
+import kr.teamcadi.myapa.domain.User;
 
 // 화면 설명 : 로그인 화면
 // Author : Soohyun, Last Modified : 2020.11.28

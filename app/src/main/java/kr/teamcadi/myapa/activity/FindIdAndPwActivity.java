@@ -1,4 +1,4 @@
-package kr.teamcadi.myapa;
+package kr.teamcadi.myapa.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,19 +8,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
+
+import kr.teamcadi.myapa.R;
 
 // 화면 설명 : 아이디/비밀번호 찾기 화면
 // Author : Soohyun, Last Modified : 2020.12.31
 public class FindIdAndPwActivity extends AppCompatActivity {
     Toolbar toolbar; // 상단바
     TabLayout tabLayout; // 탭
-    View line; // 구분선
-    EditText ev_phoneNumber; // 전화번호 입력창
-    Button btn_send_certificationNumber; // 인증번호 전송 버튼
-    EditText ev_certificationNumber; // 인증번호 입력창
-    Button btn_indentify_certifiationNumber; // 인증번호 확인 버튼
+    ImageView iv_divider; // 구분선
+    RelativeLayout layout_certification; // 인증관련 뷰를 담은 레이아웃
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +36,12 @@ public class FindIdAndPwActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false); //기본 타이틀 삭제
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //back버튼
 
-        line = (View)findViewById(R.id.line);
-        ev_phoneNumber = (EditText)findViewById(R.id.ev_phoneNumber);
-        btn_send_certificationNumber = (Button)findViewById(R.id.btn_send_certificationNumber);
-        ev_certificationNumber = (EditText)findViewById(R.id.ev_certificationNumber);
-        btn_indentify_certifiationNumber = (Button)findViewById(R.id.btn_indentify_certificationNumber);
+        iv_divider = findViewById(R.id.iv_divider);
+        layout_certification = findViewById(R.id.layout_certification);
 
         // 첫화면(로그인찾기화면)일 때 안보이도록 하는 부분
-        line.setVisibility(View.INVISIBLE);
-        ev_phoneNumber.setVisibility(View.INVISIBLE);
-        btn_send_certificationNumber.setVisibility(View.INVISIBLE);
-        ev_certificationNumber.setVisibility(View.INVISIBLE);
-        btn_indentify_certifiationNumber.setVisibility(View.INVISIBLE);
+        iv_divider.setVisibility(View.INVISIBLE);
+        layout_certification.setVisibility(View.INVISIBLE);
 
         // tab 설정
         tabLayout = (TabLayout)findViewById(R.id.tab_layout);
@@ -72,19 +69,13 @@ public class FindIdAndPwActivity extends AppCompatActivity {
         switch (pos) {
             case 0:
                 // 아이디 찾기 화면일 때 안보이도록 변경
-                line.setVisibility(View.INVISIBLE);
-                ev_phoneNumber.setVisibility(View.INVISIBLE);
-                btn_send_certificationNumber.setVisibility(View.INVISIBLE);
-                ev_certificationNumber.setVisibility(View.INVISIBLE);
-                btn_indentify_certifiationNumber.setVisibility(View.INVISIBLE);
+                iv_divider.setVisibility(View.INVISIBLE);
+                layout_certification.setVisibility(View.INVISIBLE);
                 break;
             case 1:
                 // 비밀번호 찾기 화면일 때 보이도록 변경
-                line.setVisibility(View.VISIBLE);
-                ev_phoneNumber.setVisibility(View.VISIBLE);
-                btn_send_certificationNumber.setVisibility(View.VISIBLE);
-                ev_certificationNumber.setVisibility(View.VISIBLE);
-                btn_indentify_certifiationNumber.setVisibility(View.VISIBLE);
+                iv_divider.setVisibility(View.VISIBLE);
+                layout_certification.setVisibility(View.VISIBLE);
                 break;
         }
     }

@@ -1,7 +1,6 @@
-package kr.teamcadi.myapa;
+package kr.teamcadi.myapa.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -13,9 +12,12 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import kr.teamcadi.myapa.R;
+import kr.teamcadi.myapa.fragment.RecentSearchFragment;
+import kr.teamcadi.myapa.fragment.SearchDetailFragment;
 
 // 화면 설명 : 검색화면
 // Author : Soohyun, Last Modified : 2021.01.16

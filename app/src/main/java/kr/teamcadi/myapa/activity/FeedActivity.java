@@ -1,20 +1,22 @@
-package kr.teamcadi.myapa;
+package kr.teamcadi.myapa.activity;
 
-// 화면 설명 : 답글쓰기 화면
-// Author : Soohyun, Last Modified : 2020.01.16
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class ReplyActivity extends AppCompatActivity {
+import kr.teamcadi.myapa.R;
+
+// 화면 설명 : 피드 화면
+// Author : Soohyun, Last Modified : 2020.01.15
+public class FeedActivity extends AppCompatActivity {
     Toolbar toolbar; // 상단바
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reply);
+        setContentView(R.layout.activity_feed);
 
         // 상단바 설정
         toolbar = (Toolbar)findViewById(R.id.toolbar);

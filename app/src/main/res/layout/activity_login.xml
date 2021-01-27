@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="123dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/iv_logo" />
+        android:background="@drawable/logo_white" />
 
     <!-- 아이디 입력창 이미지 -->
     <ImageView
@@ -96,7 +96,16 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginTop="452dp"
-        android:background="@drawable/btn_login" />
+        android:background="@drawable/btn_blue" />
+
+    <!-- 로그인 텍스트 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="472dp"
+        android:layout_centerHorizontal="true"/>
 
     <!-- 회원가입 버튼 -->
     <ImageButton
@@ -106,6 +115,15 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginTop="515dp"
-        android:background="@drawable/btn_signup" />
+        android:background="@drawable/btn_white" />
+
+    <!-- 회원가입 텍스트 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="536dp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
