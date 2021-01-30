@@ -2,6 +2,8 @@ package kr.teamcadi.myapa.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -16,14 +18,18 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 
 import kr.teamcadi.myapa.R;
+import kr.teamcadi.myapa.fragment.FindIdFragment;
+import kr.teamcadi.myapa.fragment.FindPwFragment;
 
 // 화면 설명 : 아이디/비밀번호 찾기 화면
-// Author : Soohyun, Last Modified : 2020.12.31
+// Author : Soohyun, Last Modified : 2021.01.28
 public class FindIdAndPwActivity extends AppCompatActivity {
     Toolbar toolbar; // 상단바
     TabLayout tabLayout; // 탭
-    ImageView iv_divider; // 구분선
-    RelativeLayout layout_certification; // 인증관련 뷰를 담은 레이아웃
+    FragmentManager fragmentManager; // 액티비티와 프래그먼트를 이어줌
+    FragmentTransaction transaction; // 프래그먼트와 관련된 작업 처리를 해줌
+    FindIdFragment findIdFragment; // 아이디 찾기 프래그먼트
+    FindPwFragment findPwFragment; // 비밀번호 찾기 프래그먼트
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,20 +42,31 @@ public class FindIdAndPwActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false); //기본 타이틀 삭제
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //back버튼
 
-        iv_divider = findViewById(R.id.iv_divider);
-        layout_certification = findViewById(R.id.layout_certification);
+        fragmentManager = getSupportFragmentManager();
+        findIdFragment = new FindIdFragment();
+        findPwFragment = new FindPwFragment();
 
-        // 첫화면(로그인찾기화면)일 때 안보이도록 하는 부분
-        iv_divider.setVisibility(View.INVISIBLE);
-        layout_certification.setVisibility(View.INVISIBLE);
+        // 처음 화면(아이디찾기 화면) 설정
+        transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.frame_layout, findIdFragment).commit();
 
         // tab 설정
         tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                int pos = tab.getPosition();
-                changeTab(pos); // 탭 전환
+                int pos = tab.getPosition(); // 선택된 탭 위치값
+                // 선택된 탭에 따른 화면 정의
+                switch (pos) {
+                    case 0: // 아이디 찾기 탭 선택시 -> 아이디 찾기 프래그먼트로 전환
+                        transaction = fragmentManager.beginTransaction();
+                        transaction.replace(R.id.frame_layout, findIdFragment).commit();
+                        break;
+                    case 1: // 비밀번호 찾기 탭 선택시 -> 비밀번호 찾기 프래그먼트로 전환
+                       transaction = fragmentManager.beginTransaction();
+                        transaction.replace(R.id.frame_layout, findPwFragment).commit();
+                        break;
+                }
             }
 
             @Override
@@ -62,22 +79,6 @@ public class FindIdAndPwActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    // tab 전환시 동작
-    private void changeTab(int pos) {
-        switch (pos) {
-            case 0:
-                // 아이디 찾기 화면일 때 안보이도록 변경
-                iv_divider.setVisibility(View.INVISIBLE);
-                layout_certification.setVisibility(View.INVISIBLE);
-                break;
-            case 1:
-                // 비밀번호 찾기 화면일 때 보이도록 변경
-                iv_divider.setVisibility(View.VISIBLE);
-                layout_certification.setVisibility(View.VISIBLE);
-                break;
-        }
     }
 
     @Override

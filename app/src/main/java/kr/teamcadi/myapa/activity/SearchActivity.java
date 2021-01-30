@@ -24,10 +24,11 @@ import kr.teamcadi.myapa.fragment.SearchDetailFragment;
 public class SearchActivity extends AppCompatActivity {
     public static EditText et_search; // 검색창
     public static ArrayList<String> recent_search_list; // 최근 검색어 리스트
-    FragmentManager fragmentManager;
-    FragmentTransaction transaction;
+    FragmentManager fragmentManager; // 액티비티와 프래그먼트를 이어줌
+    FragmentTransaction transaction; // 프래그먼트와 관련된 작업 처리를 해줌
     RecentSearchFragment recentSearchFragment; // 검색 전 최근 검색어 & 해시태그 화면
     SearchDetailFragment searchDetailFragment; // 검색 후 화면
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
