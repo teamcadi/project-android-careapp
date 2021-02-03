@@ -3,13 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_alarm_item">
 
+    <!-- 프로필 이미지 -->
     <ImageView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="10dp"
-        app:srcCompat="@drawable/profile"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="13dp"
+        app:srcCompat="@drawable/iv_alarm_profile"/>
 
     <!-- 알림 내용 -->
     <TextView
@@ -17,18 +20,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="90dp"
+        android:layout_marginLeft="73dp"
         android:text="XXX님이 XXX게시판에 댓글을 달았습니다."
-        android:textSize="16sp"/>
+        android:textSize="14sp"
+        android:textColor="#2699FB"/>
 
     <!-- 알림 세부적인 내용 -->
     <TextView
         android:id="@+id/tv_alarm_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="90dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="79dp"
         android:text="&quot;안녕하세요...하려고 하는데&quot;"
-        android:textSize="14sp"/>
+        android:textSize="10sp"
+        android:textColor="#2699FB"/>
 
 </RelativeLayout>

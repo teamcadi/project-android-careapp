@@ -6,11 +6,16 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -19,10 +24,9 @@ import kr.teamcadi.myapa.R;
 import kr.teamcadi.myapa.fragment.HomeFragment;
 import kr.teamcadi.myapa.fragment.MyPageFragment;
 import kr.teamcadi.myapa.fragment.NotificationFragment;
-import kr.teamcadi.myapa.fragment.SlideMenuFragment;
 
 // 화면 설명 : 메인 화면
-// Author : Jang Soo Hyun, Jaey, Seung Hyun Kim, Last Updated : 2021.01.23
+// Author : Jang Soo Hyun, Jaey, Seung Hyun Kim, Last Updated : 2021.01.30
 public class MainActivity extends AppCompatActivity
 {
     private FragmentManager fragmentManager = getSupportFragmentManager(); // Fragment 관리를 위한 요소
@@ -34,6 +38,8 @@ public class MainActivity extends AppCompatActivity
 
     DrawerLayout drawerLayout; // 사이드바를 위한 레이아웃
     NavigationView navigationView; // 사이드바
+    View headerView; // 사이드바의 헤더 부분
+    ImageView iv_user_image; // 사이드바의 헤더의 사용자 프로필 사진
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -50,6 +56,8 @@ public class MainActivity extends AppCompatActivity
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
+        headerView = navigationView.getHeaderView(0);
+        iv_user_image = headerView.findViewById(R.id.iv_user_image);
 
         // 사이드바의 메뉴 클릭시
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -71,6 +79,23 @@ public class MainActivity extends AppCompatActivity
                         break;
                 }
                 return true;
+            }
+        });
+
+        // 사이드바의 사용자 프로필 사진 클릭시 -> 추후 카메라 아이콘 클릭시로 바꿀 예정
+        iv_user_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CharSequence[] list = new CharSequence[]{"이미지 촬영", "갤러리에서 선택", "이미지 삭제"}; // 팝업창 내용 리스트
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this); // 팝업창 생성
+                builder.setNegativeButton("취소", null);
+                builder.setItems(list, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
+                        dialog.dismiss();
+                    }
+                });
+                builder.show();
             }
         });
     }

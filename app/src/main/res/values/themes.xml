@@ -24,6 +24,9 @@
     <!-- 상단바 테마 -->
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">#2699FB</item>
+        <item name="android:textColor">#2699FB</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <!-- 로그인 화면 상단바 테마 -->
@@ -34,6 +37,12 @@
     <!-- 아이디/비밀번호 찾기 화면 탭 테마 -->
     <style name="TabTheme" parent="@android:style/TextAppearance.Widget.TabWidget">
         <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 사이드바 메뉴 텍스트 테마 -->
+    <style name="SidebarTextTheme" parent="@style/Widget.Design.NavigationView">
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 

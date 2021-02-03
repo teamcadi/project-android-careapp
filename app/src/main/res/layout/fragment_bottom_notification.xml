@@ -7,8 +7,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.MyApaAndroid">
+        android:layout_height="wrap_content">
 
         <!-- 상단바 타이틀 -->
         <TextView
@@ -16,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="알람"
-            android:textSize="18sp"/>
+            android:theme="@style/ToolbarTheme"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -25,10 +24,10 @@
         android:id="@+id/rv_alarm"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:dividerHeight="0px"
+        android:layout_marginTop="78dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:dividerHeight="5dp"
         android:divider="#FFFFFF"/>
 
 </FrameLayout>

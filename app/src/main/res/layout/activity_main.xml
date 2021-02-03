@@ -32,12 +32,15 @@
     <!-- 사이드바 -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
+        android:background="#2699FB"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:layout_marginRight="-64dp"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/navi_drawer_header"
-        app:menu="@menu/navi_drawer_menu" />
+        app:menu="@menu/navi_drawer_menu"
+        app:itemTextColor="#FFFFFF"
+        app:itemTextAppearance="@style/SidebarTextTheme"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
