@@ -26,7 +26,7 @@ import kr.teamcadi.myapa.fragment.MyPageFragment;
 import kr.teamcadi.myapa.fragment.NotificationFragment;
 
 // 화면 설명 : 메인 화면
-// Author : Jang Soo Hyun, Jaey, Seung Hyun Kim, Last Updated : 2021.01.30
+// Author : Jang Soo Hyun, Jaey, Seung Hyun Kim, Last Updated : 2021.02.06
 public class MainActivity extends AppCompatActivity
 {
     private FragmentManager fragmentManager = getSupportFragmentManager(); // Fragment 관리를 위한 요소
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    // 뒤로가기 눌렀을 경우
+    // 사이드바에서 뒤로가기 눌렀을 경우
     @Override
     public void onBackPressed() {
         // 사이드 바에서 뒤로가기 눌렀을 경우
