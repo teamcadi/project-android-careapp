@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment
 
         HomeFragViewPagerAdapter homeFragViewPagerAdapter = new HomeFragViewPagerAdapter(this);
         viewPager2.setAdapter(homeFragViewPagerAdapter);
+        viewPager2.setSaveEnabled(false);
 
         String[] tabName = new String[]{"진료과", "진료과2", "진료과3"};
 
