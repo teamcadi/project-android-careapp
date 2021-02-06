@@ -35,14 +35,11 @@ public class HomeFragViewPagerAdapter extends FragmentStateAdapter
         switch(position)
         {
             case 0:
-                new EyeFragment();
-                break;
+                return new EyeFragment();
             case 1:
-                new InternalFragment();
-                break;
+                return new InternalFragment();
             case 2:
-                new ToothFragment();
-                break;
+                return new ToothFragment();
             default:
                 break;
         }
