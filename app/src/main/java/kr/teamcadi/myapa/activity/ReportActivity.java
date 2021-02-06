@@ -10,7 +10,7 @@ import android.view.MenuItem;
 
 import kr.teamcadi.myapa.R;
 
-// 화면 설명 : 복약 리포트 화면
+// 화면 설명 : 복약 리포트 화면 -> 사이드바의 데일리 리포트와 연결
 // Author : Soohyun, Last Modified : 2020.01.09
 public class ReportActivity extends AppCompatActivity {
     Toolbar toolbar; // 상단바
@@ -40,6 +40,10 @@ public class ReportActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case android.R.id.home:{ // 상단바의 back키 눌렀을 때
                 finish();
+                return true;
+            }
+            case R.id.menu_calendar: {
+
                 return true;
             }
         }
