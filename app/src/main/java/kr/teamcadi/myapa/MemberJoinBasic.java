@@ -12,6 +12,6 @@ public class MemberJoinBasic extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_member_join_basic);
+        setContentView(R.layout.activity_member_join_2);
     }
 }
