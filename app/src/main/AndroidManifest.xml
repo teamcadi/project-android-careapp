@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApaAndroid">
-        <activity android:name=".activity.CommentActivity"></activity>
+        <activity android:name=".activity.CalendarActivity"></activity>
+        <activity android:name=".activity.CommentActivity" />
         <activity android:name=".activity.ReplyActivity" />
         <activity android:name=".activity.FeedActivity" />
         <activity android:name=".activity.ReportActivity" />
