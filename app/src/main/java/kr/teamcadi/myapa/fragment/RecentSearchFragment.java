@@ -1,5 +1,6 @@
 package kr.teamcadi.myapa.fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,12 +12,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import kr.teamcadi.myapa.R;
 import kr.teamcadi.myapa.activity.SearchActivity;
 
 // 화면 설명 : 검색 전 화면 (최근 검색어, 해시태그)
-// Author : Soohyun, Last Modified : 2021.01.16
+// Author : Soohyun, Last Modified : 2021.02.04
 public class RecentSearchFragment extends Fragment {
     // 해시태그 버튼 1-6
     Button btn_hashtag1;
@@ -24,10 +26,9 @@ public class RecentSearchFragment extends Fragment {
     Button btn_hashtag3;
     Button btn_hashtag4;
     Button btn_hashtag5;
-    Button btn_hashtag6;
 
     ListView lv_recent_search; //최근 검색어 리스트뷰
-    public static ArrayAdapter<String> adapter;
+    public static ArrayAdapter<String> adapter; // 최근 검색어 리스트뷰 어댑터
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,11 +44,20 @@ public class RecentSearchFragment extends Fragment {
         btn_hashtag3 = (Button)layout.findViewById(R.id.btn_hashtag3);
         btn_hashtag4 = (Button)layout.findViewById(R.id.btn_hashtag4);
         btn_hashtag5 = (Button)layout.findViewById(R.id.btn_hashtag5);
-        btn_hashtag6 = (Button)layout.findViewById(R.id.btn_hashtag6);
 
         lv_recent_search = (ListView)layout.findViewById(R.id.lv_recent_search);
-        adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, SearchActivity.recent_search_list) ;
-        lv_recent_search.setAdapter(adapter);
+        // 어댑터 정의
+        adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, SearchActivity.recent_search_list) {
+            // 리스트뷰 텍스트 컬러 지정
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+                TextView textView = view.findViewById(android.R.id.text1);
+                textView.setTextColor(Color.parseColor("#2699FB"));
+                return view;
+            }
+        } ;
+        lv_recent_search.setAdapter(adapter); // 리스트뷰와 어댑터 연결
 
         // 전달된 검색어 최근 검색어 리스트뷰에 추가
         Bundle bundle = getArguments();
@@ -79,9 +89,6 @@ public class RecentSearchFragment extends Fragment {
                     case R.id.btn_hashtag5:
                         setSearchText(btn_hashtag5);
                         break;
-                    case R.id.btn_hashtag6:
-                        setSearchText(btn_hashtag6);
-                        break;
                 }
             }
         };
@@ -91,7 +98,6 @@ public class RecentSearchFragment extends Fragment {
         btn_hashtag3.setOnClickListener(clickListener);
         btn_hashtag4.setOnClickListener(clickListener);
         btn_hashtag5.setOnClickListener(clickListener);
-        btn_hashtag6.setOnClickListener(clickListener);
 
         return layout;
     }
