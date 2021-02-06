@@ -12,8 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApaAndroid">
-
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.CommentActivity"></activity>
+        <activity android:name=".activity.ReplyActivity" />
+        <activity android:name=".activity.FeedActivity" />
+        <activity android:name=".activity.ReportActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.FindIdAndPwActivity" />
+        <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.MemberJoinDetail" />
         <activity android:name=".activity.MemberJoinBasic" />
         <activity android:name=".activity.LoginActivity" />

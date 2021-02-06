@@ -22,9 +22,10 @@
                     android:id="@+id/tv_h1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="170dp"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="35dp"
-                    android:text="PROFILE"
+                    android:text="프로필"
+                    android:textColor="#2699FB"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -32,148 +33,59 @@
                     android:id="@+id/iv_option"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="33dp"
                     android:layout_marginLeft="350dp"
+                    android:layout_marginTop="33dp"
                     app:srcCompat="?android:attr/listChoiceIndicatorSingle" />
 
                 <ImageView
                     android:id="@+id/iv_profile"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_marginTop="100dp"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="77dp"
                     tools:srcCompat="@tools:sample/avatars" />
 
-                <TextView
-                    android:id="@+id/large_nickname"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="114dp"
                     android:layout_marginLeft="130dp"
-                    android:text="사용자"
-                    android:textSize="25sp"
-                    android:textStyle="bold"/>
+                    android:layout_marginTop="90dp">
 
-                <TextView
-                    android:id="@+id/tv_nim"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="205dp"
-                    android:layout_marginTop="120dp"
-                    android:textSize="20sp"
-                    android:text="님"/>
+                    <TextView
+                        android:id="@+id/large_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                <ImageView
-                    android:id="@+id/iv_pencil"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="120dp"
-                    android:layout_marginLeft="350dp"
-                    app:srcCompat="?android:attr/listChoiceIndicatorSingle" />
+                        android:text="사용자"
+                        android:textColor="#2699FB"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="380dp"
+                    <TextView
+                        android:id="@+id/tv_nim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="님"
+                        android:textColor="#2699FB"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
                     android:layout_height="145dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="190dp"
-
-                    app:srcCompat="?android:attr/scrollbarThumbHorizontal" />
-
-                <ImageView
-                    android:id="@+id/iv_arrow1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="203dp"
-                    android:layout_marginLeft="18dp"
-                    app:srcCompat="?attr/actionModeCloseDrawable" />
-
-                <ImageView
-                    android:id="@+id/iv_arrow2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="203dp"
-                    android:layout_marginLeft="363dp"
-                    app:srcCompat="?attr/actionModeCloseDrawable" />
-
-                <TextView
-                    android:id="@+id/tv_day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="200dp"
-                    android:layout_centerHorizontal="true"
-                    android:text="2020년 12월"
-                    android:textSize="22sp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/tv_week"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="250dp"
-                    android:layout_centerHorizontal="true"
-                    android:text="일      월      화      수      목      금      토"
-                    android:textSize="21sp"/>
-
-                <ImageView
-                    android:id="@+id/iv_circle1"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="290dp"
-                    android:layout_marginLeft="32dp"
-                    app:srcCompat="@android:drawable/presence_invisible" />
-
-                <ImageView
-                    android:id="@+id/iv_circle2"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="290dp"
-                    android:layout_marginLeft="85dp"
-                    app:srcCompat="@android:drawable/presence_invisible" />
-
-
-                <ImageView
-                    android:id="@+id/iv_circle3"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="290dp"
-                    android:layout_marginLeft="136dp"
-                    app:srcCompat="@android:drawable/presence_invisible" />
-
-
-                <ImageView
-                    android:id="@+id/iv_circle4"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="290dp"
-                    android:layout_marginLeft="188dp"
-                    app:srcCompat="@android:drawable/presence_invisible" />
-
-                <ImageView
-                    android:id="@+id/iv_circle5"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="290dp"
-                    android:layout_marginLeft="240dp"
-                    app:srcCompat="@android:drawable/presence_invisible" />
-
-                <ImageView
-                    android:id="@+id/iv_circle6"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="290dp"
-                    android:layout_marginLeft="291dp"
-                    app:srcCompat="@android:drawable/presence_invisible" />
-
-                <ImageView
-                    android:id="@+id/iv_circle7"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="290dp"
-                    android:layout_marginLeft="342dp"
-                    app:srcCompat="@android:drawable/presence_invisible" />
-
-
+                    android:layout_marginTop="149dp"
+                    android:background="#f1f9ff"
+                    app:mcv_arrowColor="#2699FB"
+                    app:mcv_calendarMode="week"
+                    app:mcv_dateTextAppearance="@style/DateTextAppearance"
+                    app:mcv_headerTextAppearance="@style/HeaderTextAppearance"
+                    app:mcv_selectionColor="#2699FB"
+                    app:mcv_showOtherDates="all"
+                    app:mcv_weekDayTextAppearance="@style/WeekdayTextAppearance" />
 
             </RelativeLayout>
 
@@ -296,23 +208,9 @@
                     android:layout_height="60dp"
                     android:layout_marginLeft="320dp"
                     android:layout_marginTop="330dp"
-
                     app:srcCompat="@android:drawable/ic_menu_add" />
 
-
             </RelativeLayout>
-
         </LinearLayout>
     </ScrollView>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nv_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="675dp"
-        app:itemBackground="@color/design_default_color_on_primary"
-        app:itemIconTint="@drawable/item_color"
-        app:itemTextColor="@drawable/item_color"
-        app:menu="@menu/menu_bottom"/>
-
 </RelativeLayout>

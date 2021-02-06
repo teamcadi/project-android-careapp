@@ -23,7 +23,7 @@
                     android:layout_height="170dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:background="#2196F3"
+                    android:background="#002196F3"
                     app:srcCompat="?android:attr/scrollbarThumbHorizontal" />
 
                 <TextView

@@ -2,14 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:addStatesFromChildren="false"
+    android:alwaysDrawnWithCache="false"
+    android:background="#00FFFFFF">
 
     <ImageView
         android:id="@+id/iv_arrow3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="26dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="26dp"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
     <TextView
@@ -18,40 +21,26 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="27dp"
+        android:text="캘린더"
         android:textSize="20dp"
-        android:text="캘린더" />
+        android:textColor="#2699FB"/>
 
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginTop="74dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="68dp"
         android:background="?android:attr/listDivider" />
 
-    <CalendarView
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         android:id="@+id/calendarView"
-        android:layout_width="400dp"
-        android:layout_height="340dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"/>
-
-    <ImageView
-        android:id="@+id/iv_btnplus2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="600dp"
-        app:srcCompat="@android:drawable/ic_menu_add" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nv_bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="673dp"
-        app:itemBackground="@color/design_default_color_on_primary"
-        app:itemIconTint="@drawable/item_color"
-        app:itemTextColor="@drawable/item_color"
-        app:menu="@menu/menu_bottom">
+        android:layout_height="383dp"
+        android:layout_marginTop="77dp"
+        app:mcv_arrowColor="#2699FB"
+        app:mcv_headerTextAppearance="@style/HeaderTextAppearance"
+        app:mcv_selectionColor="#2699FB"
+        app:mcv_showOtherDates="none"
+        app:mcv_weekDayTextAppearance="@style/WeekdayTextAppearance" />
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </RelativeLayout>
