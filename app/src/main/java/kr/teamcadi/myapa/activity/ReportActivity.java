@@ -3,6 +3,7 @@ package kr.teamcadi.myapa.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -42,8 +43,8 @@ public class ReportActivity extends AppCompatActivity {
                 finish();
                 return true;
             }
-            case R.id.menu_calendar: {
-
+            case R.id.menu_calendar: { // 상단바 오른쪽의 캘린더 아이콘 눌렀을 때
+                startActivity(new Intent(ReportActivity.this, CalendarActivity.class)); // 캘린더 화면으로 이동
                 return true;
             }
         }

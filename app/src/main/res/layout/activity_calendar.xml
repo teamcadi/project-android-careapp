@@ -7,36 +7,29 @@
     android:alwaysDrawnWithCache="false"
     android:background="#00FFFFFF">
 
-    <ImageView
-        android:id="@+id/iv_arrow3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="26dp"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
-
-    <TextView
-        android:id="@+id/tv_calendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:text="캘린더"
-        android:textSize="20dp"
-        android:textColor="#2699FB"/>
-
-    <View
-        android:id="@+id/divider"
+    <!-- 상단바 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="68dp"
-        android:background="?android:attr/listDivider" />
+        android:layout_height="wrap_content"
+        android:theme="@style/ToolbarTheme">
+
+        <!-- 상단바 타이틀 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="캘린더"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <com.prolificinteractive.materialcalendarview.MaterialCalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="383dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginTop="60dp"
         app:mcv_arrowColor="#2699FB"
         app:mcv_headerTextAppearance="@style/HeaderTextAppearance"
         app:mcv_selectionColor="#2699FB"
