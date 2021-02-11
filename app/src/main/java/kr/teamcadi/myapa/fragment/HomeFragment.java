@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment
             }
         });
 
-        String[] tabName = new String[]{"진료과", "진료과2", "진료과3"};
+        String[] tabName = new String[]{"안과", "내과", "치과"};
 
         new TabLayoutMediator(tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
