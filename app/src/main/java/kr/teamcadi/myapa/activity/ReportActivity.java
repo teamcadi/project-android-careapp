@@ -3,6 +3,7 @@ package kr.teamcadi.myapa.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,7 +11,7 @@ import android.view.MenuItem;
 
 import kr.teamcadi.myapa.R;
 
-// 화면 설명 : 복약 리포트 화면
+// 화면 설명 : 복약 리포트 화면 -> 사이드바의 데일리 리포트와 연결
 // Author : Soohyun, Last Modified : 2020.01.09
 public class ReportActivity extends AppCompatActivity {
     Toolbar toolbar; // 상단바
@@ -40,6 +41,10 @@ public class ReportActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case android.R.id.home:{ // 상단바의 back키 눌렀을 때
                 finish();
+                return true;
+            }
+            case R.id.menu_calendar: { // 상단바 오른쪽의 캘린더 아이콘 눌렀을 때
+                startActivity(new Intent(ReportActivity.this, CalendarActivity.class)); // 캘린더 화면으로 이동
                 return true;
             }
         }

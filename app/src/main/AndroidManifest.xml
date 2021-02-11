@@ -13,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApaAndroid">
         <activity android:name=".activity.CalendarActivity"></activity>
+        <activity android:name=".activity.WritepageActivity" />
         <activity android:name=".activity.CommentActivity" />
-        <activity android:name=".activity.ReplyActivity" />
         <activity android:name=".activity.FeedActivity" />
         <activity android:name=".activity.ReportActivity" />
         <activity android:name=".activity.SearchActivity" />

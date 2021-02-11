@@ -3,24 +3,20 @@
     <item><layer-list>
         <item>
             <shape>
-
-
-                <padding
-                    android:bottom="21.375dp"
-                    android:right="18dp" />
+                <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+                <solid
+                    android:color="#D4EBFE"/>
                 <stroke
                     android:width="1dp"
-                    android:color="#BCE0FD"/>
-
-
+                    android:color="#2699FB"/>
             </shape>
 
         </item>
 
-
         <item >
-            <bitmap android:gravity="bottom|right"
+            <bitmap android:gravity="right|center"
                 android:src="@drawable/down_arrow" />
         </item>
+
     </layer-list></item>
 </selector>
