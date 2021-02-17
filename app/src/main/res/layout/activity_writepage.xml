@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,101 +20,102 @@
 
                 <ImageView
                     android:id="@+id/iv_wp_arrow"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginLeft="16dp"
-                    app:srcCompat="?attr/actionModeCloseDrawable" />
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="31.5dp"
+                    app:srcCompat="@drawable/bw_arrow" />
 
                 <TextView
                     android:id="@+id/tv_wp_write"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="29.25dp"
                     android:text="글쓰기"
-                    android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textColor="#2699FB"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/iv_wp_check"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginLeft="350dp"
-                    app:srcCompat="@android:drawable/checkbox_on_background" />
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="370dp"
+                    android:layout_marginTop="34.875dp"
+                    app:srcCompat="@drawable/check" />
 
-                <View
-                    android:id="@+id/wp_divider1"
-                    android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="80dp"
-                    android:background="?android:attr/listDivider" />
 
                 <TextView
                     android:id="@+id/tv_wp_board"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="110dp"
                     android:layout_marginLeft="18dp"
+                    android:layout_marginTop="97.875dp"
                     android:text="게시판"
-                    android:textSize="20sp"/>
+                    android:textColor="#2699FB"
+                    android:textSize="16.875sp" />
 
                 <Spinner
                     android:id="@+id/wp_spinner"
-                    android:layout_width="180dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="110dp"
-                    android:layout_marginLeft="115dp"/>
+                    android:layout_width="165.375dp"
+                    android:layout_height="21.375dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="99dp" />
 
                 <TextView
                     android:id="@+id/tv_wp_tag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="150dp"
                     android:layout_marginLeft="18dp"
+                    android:layout_marginTop="131.625dp"
                     android:text="질환태그"
-                    android:textSize="20dp"/>
+                    android:textColor="#2699FB"
+                    android:textSize="16.875sp" />
 
                 <EditText
                     android:id="@+id/ed_wp_tag"
-                    android:layout_width="260dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="150dp"
-                    android:layout_marginLeft="115dp" />
+                    android:layout_width="274.5dp"
+                    android:layout_height="23.625dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="130.5dp"
+                    android:background="@drawable/wp_ev_costom_1"
+                    android:hint="#안구건조증 #결막염 #각막염"
+                    android:paddingLeft="5.625dp"
+                    android:textColor="#2699FB"
+                    android:textColorHint="#2699FB"
+                    android:textSize="13.5sp" />
 
                 <TextView
                     android:id="@+id/tv_wp_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="190dp"
                     android:layout_marginLeft="18dp"
+                    android:layout_marginTop="165.375dp"
                     android:text="글 내용"
-                    android:textSize="20dp"/>
+                    android:textColor="#2699FB"
+                    android:textSize="16.875sp" />
 
                 <View
                     android:id="@+id/wp_divider2"
                     android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="230dp"
-                    android:background="?android:attr/listDivider" />
+                    android:layout_height="2dp"
+                    android:layout_marginTop="201dp"
+                    android:background="?android:attr/listDivider"
+                    android:backgroundTint="#2699FB" />
 
-                <TextView
+                <EditText
                     android:id="@+id/tv_wp_input"
-                    android:layout_width="wrap_content"
+                    android:layout_width="375dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="270dp"
-                    android:layout_marginLeft="18dp"
-                    android:text="글을 입력하세요."
-                    android:textSize="20dp"/>
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="232.875dp"
+                    android:background="@null"
+                    android:hint="글을 입력하세요."
+                    android:textColor="#000000"
+                    android:textColorHint="#CCE5F8"
+                    android:textSize="16.875dp" />
 
-                <ImageView
-                    android:id="@+id/iv_wp_camera"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="630dp"
-                    android:layout_marginLeft="20dp"
-                    app:srcCompat="@android:drawable/ic_menu_camera" />
 
 
             </RelativeLayout>
@@ -121,13 +123,16 @@
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nv_bottom"
+        android:id="@+id/bn_wp_navigation1"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
+        android:layout_gravity="start"
         android:layout_marginTop="675dp"
-        app:itemBackground="@color/design_default_color_on_primary"
-        app:itemIconTint="@drawable/item_color"
-        app:itemTextColor="@drawable/item_color"
-        app:menu="@menu/menu_bottom"/>
+        android:background="#2699FB"
+        app:itemIconTint="@drawable/menu_selector_color"
+        app:itemTextColor="@drawable/menu_selector_color"
+        app:menu="@menu/menu_bottom" />
+
 
 </RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_r3_arrow"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="28.125dp"
+        android:layout_marginLeft="18dp"
+        app:srcCompat="@drawable/bw_arrow" />
+
+    <TextView
+        android:id="@+id/tv_r3_title"
+        android:layout_width="94.5dp"
+        android:layout_height="23.625dp"
+        android:layout_marginTop="25.875dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#2699FB"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="약 추가하기" />
+
+    <ImageView
+        android:id="@+id/iv_r3_trashbutton"
+        android:layout_width="18dp"
+        android:layout_height="22.5dp"
+        android:layout_marginLeft="371.25dp"
+        android:layout_marginTop="29.25dp"
+        app:srcCompat="@drawable/r3_trash" />
+
+    <ImageView
+        android:id="@+id/iv_r3_bg"
+        android:layout_width="385.875dp"
+        android:layout_height="60.75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="104.625dp"
+        app:srcCompat="@drawable/r3_bg" />
+
+    <TextView
+        android:id="@+id/tv_r3_mname"
+        android:layout_width="56.25dp"
+        android:layout_height="22.5dp"
+        android:layout_marginTop="123.75dp"
+        android:layout_marginLeft="46dp"
+        android:textSize="16.875sp"
+        android:textColor="#2699FB"
+        android:text="약 이름" />
+
+    <EditText
+        android:id="@+id/ev_r3_mname"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginLeft="107.25dp"
+        android:textSize="15dp"
+        android:textColor="#2699FB"
+        android:backgroundTint = "#FFFFFF"/>
+
+    <TextView
+        android:id="@+id/tv_r3_cycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="186.75dp"
+        android:layout_marginLeft="26dp"
+        android:textSize="16.875sp"
+        android:textColor="#2699FB"
+        android:text="주기" />
+
+    <TextView
+        android:id="@+id/tv_r3_term"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="238.55dp"
+        android:layout_marginLeft="26dp"
+        android:textSize="16.875sp"
+        android:textColor="#2699FB"
+        android:text="기한" />
+
+    <EditText
+        android:id="@+id/ev_r3_term"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="238.5dp"
+        android:layout_marginLeft="243dp"
+        android:background="@null"
+        android:inputType="textPersonName"
+        android:textSize="16.875sp"
+        android:textColor="#2699FB"
+        android:textColorHint="#2699FB"
+        android:hint="2021년 01월 14일" />
+
+    <TextView
+        android:id="@+id/tv_r3_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="292.5dp"
+        android:layout_marginLeft="26dp"
+        android:textSize="16.875sp"
+        android:textColor="#2699FB"
+        android:text="알람반복" />
+
+    <ImageView
+        android:id="@+id/iv_r3_time1"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="351dp"
+        android:layout_marginLeft="35dp"
+        app:srcCompat="@drawable/r3_time" />
+
+    <ImageView
+        android:id="@+id/iv_r3_time2"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="400.5dp"
+        android:layout_marginLeft="35dp"
+        app:srcCompat="@drawable/r3_time" />
+
+    <ImageButton
+        android:id="@+id/btn_r3_done"
+        android:layout_width="345.375dp"
+        android:layout_height="52.875dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="489.375dp"
+        android:background="@drawable/r3_btn" />
+
+    <TextView
+        android:id="@+id/tv_r3_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="504dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16.875dp"
+        android:textColor="#2699FB"
+        android:textStyle="bold"
+        android:text="완료" />
+
+
+</RelativeLayout>

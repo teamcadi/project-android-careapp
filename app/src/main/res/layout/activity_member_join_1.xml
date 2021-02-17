@@ -143,5 +143,25 @@
         android:textColor="#2699FB"
         android:textColorHint="#2699FB" />
 
+    <ImageButton
+        android:id="@+id/btn_mj1_next"
+        android:layout_width="331.875dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="648.875dp"
+        android:layout_marginLeft="41dp"
+        android:textSize="20.25sp"
+        android:background="@drawable/mj_btn" />
+
+    <TextView
+        android:id="@+id/tv_mj1_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="665.75dp"
+        android:text="다음"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="15.75sp"/>
+
 
 </RelativeLayout>

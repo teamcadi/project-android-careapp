@@ -4,29 +4,26 @@
 
     <item
         android:id="@+id/tab1"
-        app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="Item" />
+        android:icon="@drawable/menu"
+        android:title="메뉴" />
 
     <item
         android:id="@+id/tab2"
-        app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="Item" />
+        android:checked="true"
+        android:icon="@drawable/feed"
+        android:title="홈" />
 
     <item
         android:id="@+id/tab3"
-        app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="Item" />
+        android:icon="@drawable/profile"
+        android:title="마이페이지" />
 
     <item
         android:id="@+id/tab4"
-        app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="Item" />
+        android:icon="@drawable/alert"
+        android:title="알림" />
 </menu>

@@ -6,10 +6,10 @@
 
     <ImageView
         android:id="@+id/iv_mj3_backarrow"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="42.75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="24.75dp"
+        android:layout_marginTop="42.75dp"
         app:srcCompat="@drawable/bw_arrow" />
 
     <ImageView
@@ -166,25 +166,32 @@
         android:text="관심 연령대 설정" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/mj3_seekBar"
         android:layout_width="331.875dp"
         android:layout_height="38.25dp"
         android:layout_marginTop="556.875dp"
         android:layout_marginLeft="41dp"
         android:max="100"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_mj3_done"
         android:layout_width="331.875dp"
         android:layout_height="54dp"
-        android:layout_marginTop="628.875dp"
+        android:layout_marginTop="648.875dp"
         android:layout_marginLeft="41dp"
         android:textSize="20.25sp"
-        android:backgroundTint="#2699FB"
+        android:background="@drawable/mj_btn" />
+
+    <TextView
+        android:id="@+id/tv_mj3_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="665.75dp"
+        android:text="완료"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:text="완료" />
-
-
+        android:textSize="15.75sp"/>
 
 
 </RelativeLayout>
