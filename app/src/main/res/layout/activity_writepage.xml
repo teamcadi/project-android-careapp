@@ -123,7 +123,6 @@
                 android:background="@null"/>
 
         </RelativeLayout>
-
     </ScrollView>
 
     <!-- 구분선2 -->
@@ -147,9 +146,11 @@
 
     <!--
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nv_bottom"
+        android:id="@+id/bn_wp_navigation1"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
+        android:layout_gravity="start"
         android:layout_marginTop="675dp"
         app:itemBackground="@color/design_default_color_on_primary"
         app:itemIconTint="@drawable/item_color"

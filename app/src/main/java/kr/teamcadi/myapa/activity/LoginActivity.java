@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import kr.teamcadi.myapa.MemberJoinFirst;
 import kr.teamcadi.myapa.R;
 import kr.teamcadi.myapa.domain.User;
 
@@ -80,7 +81,7 @@ public class LoginActivity extends AppCompatActivity
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, MemberJoinBasic.class));
+                startActivity(new Intent(LoginActivity.this, MemberJoinFirst.class));
             }
         });
     }
