@@ -44,13 +44,14 @@
         android:textColor="#2699FB"/>
 
     <!-- 약 복용 체크 버튼 -->
-    <RadioButton
+    <CheckBox
         android:id="@+id/rbtn_check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
-        android:button="@drawable/selector_report_rbtn"/>
+        android:layout_marginRight="25dp"
+        android:button="@null"
+        android:background="@drawable/selector_report_rbtn"/>
 
 </RelativeLayout>

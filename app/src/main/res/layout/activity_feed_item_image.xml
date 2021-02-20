@@ -8,6 +8,7 @@
         android:id="@+id/iv_feed_image"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:background="#BCE0FD"/>
 
 </RelativeLayout>

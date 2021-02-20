@@ -13,6 +13,7 @@ import android.os.Handler;
 import android.widget.Toast;
 
 import kr.teamcadi.myapa.R;
+import kr.teamcadi.myapa.domain.FeedImage;
 
 // 화면 설명 : 서비스 실행 시 첫 화면
 // Author : Jaey, Last Modified : 2020.11.24
