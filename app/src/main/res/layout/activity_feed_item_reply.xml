@@ -41,7 +41,7 @@
 
     <!-- 답글 내용 -->
     <TextView
-        android:id="@+id/tv_reply"
+        android:id="@+id/tv_reply_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"

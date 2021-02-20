@@ -3,8 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bg_alarm_item">
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_alarm_item"/>
 
     <!-- 프로필 이미지 -->
     <ImageView
@@ -16,7 +21,7 @@
 
     <!-- 알림 내용 -->
     <TextView
-        android:id="@+id/tv_alarm"
+        android:id="@+id/tv_noti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -27,7 +32,7 @@
 
     <!-- 알림 세부적인 내용 -->
     <TextView
-        android:id="@+id/tv_alarm_detail"
+        android:id="@+id/tv_noti_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"

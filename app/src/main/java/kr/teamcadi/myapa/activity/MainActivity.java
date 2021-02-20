@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,7 +27,7 @@ import kr.teamcadi.myapa.fragment.MyPageFragment;
 import kr.teamcadi.myapa.fragment.NotificationFragment;
 
 // 화면 설명 : 메인 화면
-// Author : Jang Soo Hyun, Jaey, Seung Hyun Kim, Last Updated : 2021.02.06
+// Author : Jang Soo Hyun, Jaey, Seung Hyun Kim, Last Updated : 2021.02.17
 public class MainActivity extends AppCompatActivity
 {
     private FragmentManager fragmentManager = getSupportFragmentManager(); // Fragment 관리를 위한 요소
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity
     NavigationView navigationView; // 사이드바
     View headerView; // 사이드바의 헤더 부분
     ImageView iv_user_image; // 사이드바의 헤더의 사용자 프로필 사진
+    ImageButton btn_close; // 사이드바의 닫기 버튼
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity
         navigationView = findViewById(R.id.navigation_view);
         headerView = navigationView.getHeaderView(0);
         iv_user_image = headerView.findViewById(R.id.iv_user_image);
+        btn_close = headerView.findViewById(R.id.btn_close);
 
         // 사이드바의 메뉴 클릭시
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -73,9 +76,12 @@ public class MainActivity extends AppCompatActivity
                         break;
                     case R.id.item_setting:
                         break;
-                    case R.id.item_notice:
-                        break;
-                    case R.id.item_service_center:
+                    case R.id.item_question:
+                        Intent intent = new Intent(Intent.ACTION_SEND); // 이메일 보내는 인텐트 생성
+                        intent.setType("plain/text");
+                        String[] address = {"cadi@gmail.com"}; // 받는 사람 이메일 주소
+                        intent.putExtra(Intent.EXTRA_EMAIL, address); // 이메일 주소 전달
+                        startActivity(intent); // 인텐트 실행
                         break;
                 }
                 return true;
@@ -96,6 +102,16 @@ public class MainActivity extends AppCompatActivity
                     }
                 });
                 builder.show();
+            }
+        });
+
+        // 사이드바의 닫기 버튼 클릭시 -> 사이드바 닫힘
+        btn_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
             }
         });
     }
